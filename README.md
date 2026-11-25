@@ -5,7 +5,7 @@
 # Curso de Inglês
 
 **Treino diário de inglês por produção (escrever e falar) com correção por IA, trilha CEFR e evolução medida.**
-Feito para destravar o inglês de trabalho de duas pessoas reais, com segurança de produto de verdade.
+Feito para destravar o inglês de trabalho de duas pessoas reais (eu e a minha esposa, Helena), com segurança de produto de verdade.
 
 [**ingles.mpstudio.ia.br**](https://ingles.mpstudio.ia.br) · PWA instalável · funciona offline para escrever e consultar
 
@@ -21,7 +21,7 @@ Feito para destravar o inglês de trabalho de duas pessoas reais, com segurança
 
 </div>
 
-> **In English —** A personal English-training platform for two professionals (an AI automation engineer at B1 and a corporate lawyer at C1). Every exercise forces *production* — writing and speaking about their real work — and is corrected by Claude through a Supabase Edge Function that runs every query **as the signed-in user under Row Level Security** (no service-role key anywhere). Sessions use an HttpOnly cookie BFF on Vercel, the app is an installable offline-capable PWA, and the learning plan follows CEFR can-do descriptors, the 4/3/2 fluency technique and spaced repetition. It also has a listening block, daily push reminders and an offline queue that sends work for correction when the signal returns. Covered by automated end-to-end and API tests plus a self-test against the real model. The source code lives in a private repository; this one is a showcase.
+> **In English —** A personal English-training platform for two professionals — me (an AI automation engineer at B1) and my wife Helena (a corporate lawyer at C1). Every exercise forces *production* — writing and speaking about their real work — and is corrected by Claude through a Supabase Edge Function that runs every query **as the signed-in user under Row Level Security** (no service-role key anywhere). Sessions use an HttpOnly cookie BFF on Vercel, the app is an installable offline-capable PWA, and the learning plan follows CEFR can-do descriptors, the 4/3/2 fluency technique and spaced repetition. It also has a listening block, daily push reminders and an offline queue that sends work for correction when the signal returns. Covered by automated end-to-end and API tests plus a self-test against the real model. The source code lives in a private repository; this one is a showcase.
 
 ---
 
@@ -43,7 +43,7 @@ Feito para destravar o inglês de trabalho de duas pessoas reais, com segurança
 
 ## Por que existe
 
-Eu trabalho com automação e IA (bots de WhatsApp, n8n, Supabase, LLMs) e venho recebendo "não" em vagas de **Forward Deployed Engineer / AI Engineer** por causa do inglês. Eu entendo o que leio, mas travo na hora de **produzir**: escrever uma mensagem para cliente, explicar um fluxo, falar de um projeto numa entrevista.
+Eu trabalho com automação e IA (bots de WhatsApp, n8n, Supabase, LLMs), e o inglês era o que mais travava as minhas candidaturas para **Forward Deployed Engineer / AI Engineer**, então construí a ferramenta que eu precisava. Eu entendo o que leio, mas travo na hora de **produzir**: escrever uma mensagem para cliente, explicar um fluxo, falar de um projeto numa entrevista.
 
 Apps genéricos não resolviam isso: treinam reconhecimento (múltipla escolha, ouvir e repetir) com temas que não são do meu mundo. Eu precisava de um treino que:
 
@@ -52,7 +52,7 @@ Apps genéricos não resolviam isso: treinam reconhecimento (múltipla escolha, 
 - corrigisse na hora, explicasse o erro e **reciclasse os meus próprios erros** nos exercícios seguintes;
 - **medisse a evolução** de forma honesta, sempre com a mesma régua.
 
-O mesmo app atende uma segunda pessoa com outro objetivo: uma advogada de jurídico corporativo, já em nível avançado, que conduz reuniões em inglês. A trilha dela é jurídica e corporativa (conduzir reunião, discordar com diplomacia, negociar cláusula, explicar risco para a diretoria). **Mesma plataforma, duas trilhas, dados totalmente isolados.**
+O mesmo app atende a minha esposa, Helena, com outro objetivo: ela é advogada de jurídico corporativo, já em nível avançado, que conduz reuniões em inglês. A trilha dela é jurídica e corporativa (conduzir reunião, discordar com diplomacia, negociar cláusula, explicar risco para a diretoria). **Mesma plataforma, duas trilhas, dados totalmente isolados.**
 
 ## O que ele faz
 
