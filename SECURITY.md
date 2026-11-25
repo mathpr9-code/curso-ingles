@@ -6,8 +6,8 @@ Este projeto foi construído e avaliado seguindo uma matriz própria de seguran�
 
 ### Dados e autorização
 - **Row Level Security** em todas as tabelas, com políticas por operação e triggers que forçam o dono de cada linha.
-- **Sem chave de administrador (`service_role`)** no projeto: a Edge Function abre cada transação com o papel `authenticated` e os claims do próprio usuário, então o banco decide o que cada pessoa pode ler e gravar.
-- Permissão de escrita por coluna: a pessoa altera só os próprios horários de lembrete e o próprio plano de estudo (total validado por constraint no banco), nunca a cota de IA.
+- **Sem chave de administrador** no projeto: cada consulta roda com a identidade do próprio usuário, então o banco decide o que cada pessoa pode ler e gravar.
+- Permissão de escrita por coluna: a pessoa altera só os próprios horários de lembrete e o próprio plano de estudo (total validado no banco), nunca a cota de IA.
 - Tarefas automáticas (lembrete diário) rodam com um papel restrito, sem login e sem acesso direto às tabelas, por funções com o mínimo necessário.
 - Foto de perfil em bucket privado com RLS por pasta: cada pessoa acessa só o próprio arquivo; tamanho (5 MB) e tipos de imagem limitados no servidor.
 - Isolamento entre contas verificado com testes no banco.
@@ -24,9 +24,9 @@ Este projeto foi construído e avaliado seguindo uma matriz própria de seguran�
 - Validação e limite de tamanho de entradas; erros genéricos para o cliente; logs sem conteúdo do usuário.
 - Cotas de uso da IA por pessoa e CORS restrito ao domínio.
 - Texto do usuário tratado como dado no prompt; saída da IA em JSON validado por schema (structured outputs), depois validada de novo, truncada e escapada antes de ser exibida.
-- Autoteste da IA protegido pelo segredo do agendador (Vault); usa só dados de exemplo e não acessa dados de ninguém.
+- Autoteste da IA protegido por segredo; usa só dados de exemplo e não acessa dados de ninguém.
 - Chave da API de IA disponível apenas no servidor.
-- Notificações: chaves VAPID e segredo do agendador guardados no Supabase Vault; endereços de push restritos aos serviços oficiais (contra SSRF); limite de aparelhos por pessoa.
+- Notificações: chaves e segredos guardados no cofre do Supabase; endereços de push restritos aos serviços oficiais (contra SSRF); limite de aparelhos por pessoa.
 
 ### Navegador e aplicativo
 - Content Security Policy estrita, HSTS, proteção contra iframe, `nosniff`, `Referrer-Policy` e `Permissions-Policy`.
